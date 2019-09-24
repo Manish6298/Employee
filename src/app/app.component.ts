@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EmployeeServices } from './employee.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  constructor(private emp : EmployeeServices ){}
   title = 'servicesdemo';
+  emp_id
+  emp_name
+  emp_dept
+ myEmployee = { 
+  id : 1,
+  name : ' ',
+  dept : ' '
+}
+ addEmployee(){
+    this.myEmployee.id= this.emp_id
+    this.myEmployee.name= this.emp_name
+    this.myEmployee.dept= this.emp_dept
+
+    this.emp.setEmployee(this.myEmployee)
+ }
 }

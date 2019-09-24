@@ -1,0 +1,11 @@
+table,tr,td,th{
+    text-decoration: blue;
+    border-color: blue;
+    border:solid 1px;
+}
+table{
+    border-radius: 12px;
+}
+tr,td,th{
+    background-color: lightblue;
+}
